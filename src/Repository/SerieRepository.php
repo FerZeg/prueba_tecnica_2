@@ -45,13 +45,13 @@ class SerieRepository extends ServiceEntityRepository
 //            ->getOneOrNullResult()
 //        ;
 //    }
-    public function findByYearAndCreator($year, $creator): array
+    public function findByYearAndCreator($año, $creador): array
     {
         return $this->createQueryBuilder('s')
-            ->andWhere('s.year = :year')
-            ->andWhere('s.creator = :creator')
-            ->setParameter('year', $year)
-            ->setParameter('creator', $creator)
+            ->andWhere('s.año = :año')
+            ->andWhere('s.creador = :creador')
+            ->setParameter('year', $año)
+            ->setParameter('creator', $creador)
             ->getQuery()
             ->getResult()
         ;

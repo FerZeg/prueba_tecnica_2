@@ -16,7 +16,7 @@ class SeriesController extends AbstractController
         $año = $request->query->get('año');
         $creador = $request->query->get('creador');
         // $repository = código para obtener el repositorio
-        // $series = $repository->findBy(['año' => $año, 'creador' => $creador]);
+        // $series = $repository->findByYearAndCreator($año, $creador);
         $series = ["serie1", "serie2", "serie3"];
         return $this->json(["filtro" => ["año" => $año, "creador" => $creador], "series" => $series]);
     }
